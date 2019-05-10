@@ -26,8 +26,8 @@
   </script>
 </head>
 <body>
-  <div class="d-md-flex h-md-100 align-items-centers">
-    <div class="col-md-6 p-0" style="background-color:black;color:white">
+  <div class="justify-content-between flex-wrap flex-md-nowrap pt-3 pb-2 mb-3 border-bottom d-md-flex">
+    <div class="col-md-6 p-0 bg-primary">
       <h3>You sent ...</h3>
       {% for key, value in params.items() %}
       <p>{{ key }}: {{ value }}</p>
@@ -37,7 +37,7 @@
       <p>{{ key }}: {{ value }}</p>
       {% endfor %}
     </div>
-    <div class="col-md-6 p-0" style="background-color:white;color:black">
+    <div class="col-md-6 p-0 bg-success">
       <h3>After cleaning ...</h3>
       {% for key, value in other_params.items() %}
       <p>{{ key }}: {{ value }}</p>
