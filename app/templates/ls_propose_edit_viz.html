@@ -28,7 +28,7 @@
 <body>
   <div class="container">
     <div class="justify-content-between flex-wrap flex-md-nowrap pt-3 pb-2 mb-3 border-bottom d-md-flex">
-      <div class="col-md-6 p-0" style="border:1px solid black;">
+      <div class="col-md-6 p-1" style="border:1px solid black;">
         <h3>You sent ...</h3>
         {% for key, value in params.items() %}
         <p>{{ key }}: {{ value }}</p>
@@ -38,7 +38,7 @@
         <p>{{ key }}: {{ value }}</p>
         {% endfor %}
       </div>
-      <div class="col-md-6 p-0" style="border:1px solid black;">
+      <div class="col-md-6 p-1" style="border:1px solid black;">
         <h3>After cleaning ...</h3>
         {% for key, value in other_params.items() %}
         <p>{{ key }}: {{ value }}</p>
