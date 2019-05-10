@@ -26,15 +26,21 @@
   </script>
 </head>
 <body>
-  <div class="container">
-    <h2>Original Params</h2>
-    <p>{{ params }}</p>
-    <h2>Original Venue Details</h2>
-    <p>{{ original_details }}</p>
-    <h2>Modified Params</h2>
-    <p>{{ other_params }}</p>
-    <h2>Edited Venue Details</h2>
-    <p>{{ edited_details }}</p>
+  <div class="container-fluid">
+    <div class="justify-content-between flex-wrap flex-md-nowrap pt-3 pb-2 mb-3 border-bottom d-md-flex">
+      <div class="col-md-6 p-0">
+        <h3>You sent ...</h3>
+        <p>{{ params }}</p>
+        <h3>Original Venue Details</h3>
+        <p>{{ original_details }}</p>
+      </div>
+      <div class="col-md-6 p-0">
+        <h3>After cleaning ...</h3>
+        <p>{{ other_params }}</p>
+        <h3>Edited Venue Details</h3>
+        <p>{{ edited_details }}</p>
+      </div>
+    </div>
   </div>
 </body>
 </html>
