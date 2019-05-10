@@ -46,8 +46,6 @@ def ls_propose_edit(venue_id):
 
     wbk = gsheets_client.open_by_url(STYLE_GUIDE_SOURCE)
 
-    list_of_cc = wbk.worksheets()
-
     other_params = {}
     params = {}
 
@@ -66,10 +64,10 @@ def ls_propose_edit(venue_id):
     # Pull the countrycode of the venue, since different regions may have conflicting
     # styling rules, and then pull the necessary rules from the GSheet.
     country_code = fsq_result['venue']['location'].get('cc','')
-    header, values = sheets_to_list(wbk, country_code)
 
-    # Convert the data from GSheets into a dataframe for manipulation
-    rules_df = list_to_df(values, header)
+    # We then convert the rules for the necessary country into a dataframe
+    rules_df = sheets_to_df(wbk, country_code)
+
 
     # Loop through all the rules to clean the data coming in from the listing syndicators
     for index,row in rules_df.iterrows():
