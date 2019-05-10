@@ -27,19 +27,25 @@
 </head>
 <body>
   <div class="container-fluid">
-    <div class="justify-content-between flex-wrap flex-md-nowrap pt-3 pb-2 mb-3 border-bottom d-md-flex">
-      <div class="col-md-6 p-0">
-        <h3>You sent ...</h3>
-        <p>{{ params }}</p>
-        <h3>Original Venue Details</h3>
-        <p>{{ original_details }}</p>
-      </div>
-      <div class="col-md-6 p-0">
-        <h3>After cleaning ...</h3>
-        <p>{{ other_params }}</p>
-        <h3>Edited Venue Details</h3>
-        <p>{{ edited_details }}</p>
-      </div>
+    <div class="col-md-6 p-0" style="background-color:black;color:white">
+      <h3>You sent ...</h3>
+      {% for key, value in params.items() %}
+      <p>{{ key }}: {{ value }}</p>
+      {% endfor %}
+      <h3>Original Venue Details</h3>
+      {% for key, value in original_details.items() %}
+      <p>{{ key }}: {{ value }}</p>
+      {% endfor %}
+    </div>
+    <div class="col-md-6 p-0" style="background-color:white;color:black">
+      <h3>After cleaning ...</h3>
+      {% for key, value in other_params.items() %}
+      <p>{{ key }}: {{ value }}</p>
+      {% endfor %}
+      <h3>Edited Venue Details</h3>
+      {% for key, value in edited_details.items() %}
+      <p>{{ key }}: {{ value }}</p>
+      {% endfor %}
     </div>
   </div>
 </body>
