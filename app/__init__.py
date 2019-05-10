@@ -9,7 +9,6 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 
 app = Flask(__name__)
-app.config.from_object(Config)
 
 client = foursquare.Foursquare(client_id=os.getenv("FOURSQUARE_CLIENT_ID"),
                                client_secret=os.getenv("FOURSQUARE_CLIENT_SECRET"),
