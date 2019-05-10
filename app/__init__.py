@@ -24,4 +24,4 @@ creds_dict["private_key"] = creds_dict["private_key"].replace("\\\\n", "\n")
 creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
 gsheets_client = gspread.authorize(creds)
 
-from app import routes, models
+from app import routes
